@@ -3,352 +3,105 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="Computer, Components, PC, CompTIA" />
-    <title>What's Inside A PC?</title>
+    <meta name="description" content="A visual guide to the components inside a personal computer." />
+    <title>Inside a PC | Hardware Guide</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <!-- Hamburger Toggle Button -->
-    <button class="hamburger-btn" onclick="toggleSidebar()">☰ Menu</button>
+    <button class="menu-button" aria-controls="sidebar" aria-expanded="false" onclick="toggleSidebar()">
+      <span aria-hidden="true">☰</span> Contents
+    </button>
 
-    <!-- Sidebar Navigation -->
     <aside class="sidebar" id="sidebar">
-      <h2>PC Components</h2>
-      <a href="#personal-computers" onclick="closeSidebar()">Personal Computers</a>
-      <a href="#motherboard" onclick="closeSidebar()">Motherboard</a>
-      <a href="#cpus" onclick="closeSidebar()">CPUs</a>
-      <a href="#cables-and-connectors" onclick="closeSidebar()">Cables & Connectors</a>
-      <a href="#legacy-cables" onclick="closeSidebar()">Legacy Cables</a>
-      <a href="#storage-devices" onclick="closeSidebar()">Storage Devices</a>
-      <a href="#system-memory" onclick="closeSidebar()">System Memory</a>
-      <a href="#graphic-cards" onclick="closeSidebar()">Graphics / Sound / NIC Cards</a>
-      <a href="#peripheral-devices" onclick="closeSidebar()">Peripheral Devices</a>
-      <a href="#power-supplies" onclick="closeSidebar()">Power Supplies & Cooling</a>
+      <div class="sidebar-brand"><span class="brand-mark">PC</span><div><strong>Inside a PC</strong><small>Hardware guide</small></div></div>
+      <nav aria-label="Guide sections">
+        <p class="nav-label">Start here</p>
+        <a href="#overview" onclick="closeSidebar()">Overview</a>
+        <a href="#safety" onclick="closeSidebar()">Safety & ESD</a>
+        <p class="nav-label">Core components</p>
+        <a href="#motherboard" onclick="closeSidebar()">Motherboard</a>
+        <a href="#cpu" onclick="closeSidebar()">CPU</a>
+        <a href="#memory" onclick="closeSidebar()">System memory</a>
+        <a href="#storage" onclick="closeSidebar()">Storage</a>
+        <p class="nav-label">Connections</p>
+        <a href="#expansion" onclick="closeSidebar()">Expansion cards</a>
+        <a href="#cables" onclick="closeSidebar()">Cables & connectors</a>
+        <a href="#peripherals" onclick="closeSidebar()">Peripherals</a>
+        <a href="#power" onclick="closeSidebar()">Power & cooling</a>
+      </nav>
     </aside>
 
-    <!-- Main Content Area -->
     <main class="content">
-      <h1>What's Inside A Personal Computer?</h1>
-      <p>A reference guide based on CompTIA PC hardware principles.</p>
+      <header class="hero" id="overview">
+        <div class="eyebrow">PC hardware essentials</div>
+        <h1>What’s inside a<br /><em>personal computer?</em></h1>
+        <p class="hero-copy">A visual, beginner-friendly tour of the parts that make a computer work — and how they connect together.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#safety">Begin the tour <span>→</span></a><span class="hero-note">9 core topics · visual references</span></div>
+      </header>
 
-      <!-- Personal Computers -->
-      <section id="personal-computers">
-        <h2>Personal Computers Overview</h2>
-<div class="graphics-gallery" aria-label="Section graphics">
-  <figure><img src="assets/graphic-001.png" alt="PC hardware learning graphic 1" loading="lazy"></figure>
-  <figure><img src="assets/graphic-002.png" alt="PC hardware learning graphic 2" loading="lazy"></figure>
-  <figure><img src="assets/graphic-003.png" alt="PC hardware learning graphic 3" loading="lazy"></figure>
-</div>
-
-        <p>The front panel provides access to optical drives, power buttons, temperature displays, and front I/O ports[cite: 2]. The rear panel provides access to power connections, rear motherboard ports, expansion card slots, and hot air vents[cite: 3].</p>
+      <section class="intro-grid" aria-label="Guide overview">
+        <div class="intro-card"><span class="card-number">01</span><h2>Start with the big picture</h2><p>The case holds the power supply, motherboard, processor, memory, storage, cooling, and optional expansion cards.</p></div>
+        <div class="intro-card accent-card"><span class="card-number">02</span><h2>Follow the data path</h2><p>Data moves from storage into memory, through the CPU, and out to displays, networks, and other peripherals.</p></div>
+        <div class="intro-card"><span class="card-number">03</span><h2>Work safely</h2><p>Power off, unplug, ground yourself, and protect sensitive components from electrostatic discharge.</p></div>
       </section>
 
-      <!-- Section 1: Motherboard -->
-      <section id="motherboard">
-        <h2>Motherboard</h2>
-<div class="graphics-gallery" aria-label="Section graphics">
-  <figure><img src="assets/graphic-004.png" alt="PC hardware learning graphic 4" loading="lazy"></figure>
-  <figure><img src="assets/graphic-005.png" alt="PC hardware learning graphic 5" loading="lazy"></figure>
-  <figure><img src="assets/graphic-006.png" alt="PC hardware learning graphic 6" loading="lazy"></figure>
-  <figure><img src="assets/graphic-007.png" alt="PC hardware learning graphic 7" loading="lazy"></figure>
-  <figure><img src="assets/graphic-008.png" alt="PC hardware learning graphic 8" loading="lazy"></figure>
-  <figure><img src="assets/graphic-009.png" alt="PC hardware learning graphic 9" loading="lazy"></figure>
-  <figure><img src="assets/graphic-010.png" alt="PC hardware learning graphic 10" loading="lazy"></figure>
-  <figure><img src="assets/graphic-011.png" alt="PC hardware learning graphic 11" loading="lazy"></figure>
-  <figure><img src="assets/graphic-012.png" alt="PC hardware learning graphic 12" loading="lazy"></figure>
-  <figure><img src="assets/graphic-013.png" alt="PC hardware learning graphic 13" loading="lazy"></figure>
-  <figure><img src="assets/graphic-014.png" alt="PC hardware learning graphic 14" loading="lazy"></figure>
-  <figure><img src="assets/graphic-015.png" alt="PC hardware learning graphic 15" loading="lazy"></figure>
-  <figure><img src="assets/graphic-016.png" alt="PC hardware learning graphic 16" loading="lazy"></figure>
-  <figure><img src="assets/graphic-017.png" alt="PC hardware learning graphic 17" loading="lazy"></figure>
-  <figure><img src="assets/graphic-018.png" alt="PC hardware learning graphic 18" loading="lazy"></figure>
-  <figure><img src="assets/graphic-019.png" alt="PC hardware learning graphic 19" loading="lazy"></figure>
-  <figure><img src="assets/graphic-020.png" alt="PC hardware learning graphic 20" loading="lazy"></figure>
-  <figure><img src="assets/graphic-021.png" alt="PC hardware learning graphic 21" loading="lazy"></figure>
-  <figure><img src="assets/graphic-022.png" alt="PC hardware learning graphic 22" loading="lazy"></figure>
-</div>
-
-        <p>The motherboard is the main printed circuit board (PCB) providing data and power bus connectivity between all hardware components[cite: 7].</p>
-        <p><strong>Electrical Safety & ESD:</strong> Always use ESD wrist straps, grounding mats, and anti-static bags to prevent electrostatic discharge damage[cite: 5].</p>
-        <p><strong>Functions:</strong> Provides system clock timing and routes data between the CPU, RAM, cache, and mass storage[cite: 7, 8].</p>
-        <p><strong>CPU & Memory Connectors:</strong> Features the CPU socket, DIMM slots, M.2 connector, and SATA connectors[cite: 9, 10, 11].</p>
-        <p><strong>PCIe Slots:</strong> PCIe slots come in x1, x4, x8, and x16 lane widths for adapter cards[cite: 13, 14].</p>
-        <p><strong>PCI Slots:</strong> Legacy expansion slots that are not compatible with modern PCIe slots[cite: 15].</p>
-        <p><strong>Installation:</strong> Uses standoffs to secure the motherboard inside the chassis after installing the I/O shield[cite: 18].</p>
-        <p><strong>Headers:</strong> Includes front panel pins, 9-pin USB headers, and audio headers[cite: 20, 21].</p>
+      <section class="guide-section safety-section" id="safety">
+        <div class="section-heading"><span class="section-kicker">Before you open the case</span><h2>Electrical safety & ESD</h2><p>Protect yourself and the computer before touching any internal part.</p></div>
+        <div class="safety-grid">
+          <div class="safety-list"><div class="safety-item"><span>01</span><div><strong>Disconnect power</strong><p>Shut down the computer, unplug it from the wall, and press the power button once to discharge remaining power.</p></div></div><div class="safety-item"><span>02</span><div><strong>Control static electricity</strong><p>Use an ESD wrist strap and grounding mat whenever possible. Avoid working on carpet or wearing clothing that creates static.</p></div></div><div class="safety-item"><span>03</span><div><strong>Use a safe workbench</strong><p>Work on a clean, dry, non-conductive surface. Hold circuit boards by their edges and store parts in ESD-safe bags.</p></div></div></div>
+          <figure class="image-card safety-image"><img src="assets/graphic-006.png" alt="An anti-static wrist strap on a grounding mat" loading="lazy" /><figcaption>Anti-static wrist strap and grounding mat</figcaption></figure>
+        </div>
       </section>
 
-      <!-- Section 2: CPUs -->
-      <section id="cpus">
-        <h2>CPUs (Central Processing Unit)</h2>
-<div class="graphics-gallery" aria-label="Section graphics">
-  <figure><img src="assets/graphic-023.png" alt="PC hardware learning graphic 23" loading="lazy"></figure>
-  <figure><img src="assets/graphic-024.png" alt="PC hardware learning graphic 24" loading="lazy"></figure>
-  <figure><img src="assets/graphic-025.png" alt="PC hardware learning graphic 25" loading="lazy"></figure>
-  <figure><img src="assets/graphic-026.png" alt="PC hardware learning graphic 26" loading="lazy"></figure>
-  <figure><img src="assets/graphic-027.png" alt="PC hardware learning graphic 27" loading="lazy"></figure>
-  <figure><img src="assets/graphic-028.png" alt="PC hardware learning graphic 28" loading="lazy"></figure>
-  <figure><img src="assets/graphic-029.png" alt="PC hardware learning graphic 29" loading="lazy"></figure>
-  <figure><img src="assets/graphic-030.png" alt="PC hardware learning graphic 30" loading="lazy"></figure>
-  <figure><img src="assets/graphic-031.png" alt="PC hardware learning graphic 31" loading="lazy"></figure>
-  <figure><img src="assets/graphic-032.png" alt="PC hardware learning graphic 32" loading="lazy"></figure>
-</div>
-
-        <p>The primary processor that executes instructions using a Fetch-Decode-Execute-Writeback architecture[cite: 24].</p>
-        <p><strong>Socket Types:</strong> AMD uses Pin Grid Array (PGA) with pins on the chip[cite: 29]. Intel uses Land Grid Array (LGA) with pins on the motherboard socket[cite: 29].</p>
+      <section class="guide-section" id="motherboard">
+        <div class="section-heading"><span class="section-kicker">01 / The foundation</span><h2>Motherboard</h2><p>The main circuit board connects the computer’s components and gives them paths for power and data.</p></div>
+        <div class="feature-layout"><figure class="image-card"><img src="assets/graphic-009.png" alt="Motherboard showing CPU, memory, storage, and adapter connectors" loading="lazy" /><figcaption>Key motherboard connectors</figcaption></figure><div class="fact-stack"><div class="fact"><strong>Core job</strong><span>Routes data between the CPU, RAM, cache, storage, and expansion cards.</span></div><div class="fact"><strong>What to find</strong><span>CPU socket, DIMM memory slots, M.2 connector, SATA connectors, PCIe slots, and front-panel headers.</span></div><div class="fact"><strong>Installation note</strong><span>Install the I/O shield and motherboard standoffs before securing the board inside the case.</span></div></div></div>
       </section>
 
-      <!-- Section 3: Cables and Connectors -->
-      <section id="cables-and-connectors">
-        <h2>Cables and Connectors</h2>
-<div class="graphics-gallery" aria-label="Section graphics">
-  <figure><img src="assets/graphic-033.png" alt="PC hardware learning graphic 33" loading="lazy"></figure>
-  <figure><img src="assets/graphic-034.png" alt="PC hardware learning graphic 34" loading="lazy"></figure>
-  <figure><img src="assets/graphic-035.png" alt="PC hardware learning graphic 35" loading="lazy"></figure>
-  <figure><img src="assets/graphic-036.png" alt="PC hardware learning graphic 36" loading="lazy"></figure>
-  <figure><img src="assets/graphic-037.png" alt="PC hardware learning graphic 37" loading="lazy"></figure>
-  <figure><img src="assets/graphic-038.png" alt="PC hardware learning graphic 38" loading="lazy"></figure>
-  <figure><img src="assets/graphic-039.png" alt="PC hardware learning graphic 39" loading="lazy"></figure>
-</div>
-
-        <p><strong>SATA Interface:</strong> Standard data and power cables for internal drives[cite: 34, 35]. SATA Rev 3 supports up to 6 Gbps[cite: 34].</p>
-        <p><strong>Molex Connector:</strong> 4-pin connector delivering +5V DC (Red) and +12V DC (Yellow) power[cite: 37].</p>
+      <section class="guide-section" id="cpu">
+        <div class="section-heading"><span class="section-kicker">02 / The processor</span><h2>CPU</h2><p>The central processing unit fetches, decodes, and executes instructions.</p></div>
+        <div class="two-column"><div><h3>What matters</h3><ul class="clean-list"><li>Clock speed and the number of cores affect how quickly tasks can run.</li><li>The CPU socket must match the motherboard.</li><li>AMD commonly uses PGA-style processors; Intel commonly uses LGA-style sockets.</li></ul></div><figure class="image-card"><img src="assets/graphic-008.png" alt="Diagram showing the relationship between CPU, cache, RAM, and storage" loading="lazy" /><figcaption>How the processor relates to memory and storage</figcaption></figure></div>
       </section>
 
-      <!-- Section 4: Legacy Cables -->
-      <section id="legacy-cables">
-        <h2>Legacy Cables</h2>
-<div class="graphics-gallery" aria-label="Section graphics">
-  <figure><img src="assets/graphic-040.png" alt="PC hardware learning graphic 40" loading="lazy"></figure>
-  <figure><img src="assets/graphic-041.png" alt="PC hardware learning graphic 41" loading="lazy"></figure>
-  <figure><img src="assets/graphic-042.png" alt="PC hardware learning graphic 42" loading="lazy"></figure>
-  <figure><img src="assets/graphic-043.png" alt="PC hardware learning graphic 43" loading="lazy"></figure>
-  <figure><img src="assets/graphic-044.png" alt="PC hardware learning graphic 44" loading="lazy"></figure>
-  <figure><img src="assets/graphic-045.png" alt="PC hardware learning graphic 45" loading="lazy"></figure>
-  <figure><img src="assets/graphic-046.png" alt="PC hardware learning graphic 46" loading="lazy"></figure>
-</div>
-
-        <p><strong>Video Cables:</strong> DVI (digital/analog) and VGA (15-pin analog video)[cite: 41, 42, 43].</p>
-        <p><strong>Serial Cables:</strong> RS-232 serial standard using DB-9 connectors[cite: 44].</p>
+      <section class="guide-section" id="memory">
+        <div class="section-heading"><span class="section-kicker">03 / Fast working space</span><h2>System memory (RAM)</h2><p>RAM temporarily holds the instructions and data the CPU is actively using.</p></div>
+        <div class="feature-layout"><div class="fact-stack"><div class="fact"><strong>Desktop vs laptop</strong><span>Desktops use full-sized DIMMs; laptops use smaller SO-DIMMs.</span></div><div class="fact"><strong>Dual-channel memory</strong><span>Install matching modules in the recommended paired slots for more memory bandwidth.</span></div><div class="fact"><strong>Virtual memory</strong><span>When RAM fills up, the operating system can use part of the storage drive as slower backup workspace.</span></div></div><div class="memory-callout"><span class="mini-icon">RAM</span><strong>Fast working space</strong><p>RAM is the computer’s short-term workspace: quick to access, but limited and temporary.</p></div></div>
+        <div class="table-wrap"><table class="data-table"><caption>RAM generations at a glance</caption><thead><tr><th>Type</th><th>Typical data rate</th><th>Transfer rate</th><th>Maximum module size</th></tr></thead><tbody><tr><td>DDR1</td><td>200–400 MT/s</td><td>1.6–3.2 GB/s</td><td>1 GB</td></tr><tr><td>DDR2</td><td>400–1066 MT/s</td><td>3.2–8.5 GB/s</td><td>4 GB</td></tr><tr><td>DDR3</td><td>800–2133 MT/s</td><td>6.4–17.0 GB/s</td><td>16 GB</td></tr><tr><td>DDR4</td><td>1600–3200 MT/s</td><td>12.8–25.6 GB/s</td><td>32 GB</td></tr><tr><td>DDR5</td><td>4800–8000+ MT/s</td><td>38.4–51.2+ GB/s</td><td>128 GB+</td></tr></tbody></table></div>
       </section>
 
-      <!-- Section 5: Storage Devices -->
-      <section id="storage-devices">
-        <h2>Storage Devices</h2>
-<div class="graphics-gallery" aria-label="Section graphics">
-  <figure><img src="assets/graphic-047.png" alt="PC hardware learning graphic 47" loading="lazy"></figure>
-  <figure><img src="assets/graphic-048.png" alt="PC hardware learning graphic 48" loading="lazy"></figure>
-  <figure><img src="assets/graphic-049.png" alt="PC hardware learning graphic 49" loading="lazy"></figure>
-  <figure><img src="assets/graphic-050.png" alt="PC hardware learning graphic 50" loading="lazy"></figure>
-  <figure><img src="assets/graphic-051.png" alt="PC hardware learning graphic 51" loading="lazy"></figure>
-  <figure><img src="assets/graphic-052.png" alt="PC hardware learning graphic 52" loading="lazy"></figure>
-  <figure><img src="assets/graphic-053.png" alt="PC hardware learning graphic 53" loading="lazy"></figure>
-  <figure><img src="assets/graphic-054.png" alt="PC hardware learning graphic 54" loading="lazy"></figure>
-  <figure><img src="assets/graphic-055.png" alt="PC hardware learning graphic 55" loading="lazy"></figure>
-  <figure><img src="assets/graphic-056.png" alt="PC hardware learning graphic 56" loading="lazy"></figure>
-  <figure><img src="assets/graphic-057.png" alt="PC hardware learning graphic 57" loading="lazy"></figure>
-  <figure><img src="assets/graphic-058.png" alt="PC hardware learning graphic 58" loading="lazy"></figure>
-</div>
-
-        <p><strong>Drive Bays:</strong> Case contains 5.25-inch bays for optical drives and 3.5-inch bays for hard drives[cite: 48].</p>
-        <p><strong>SSDs:</strong> Non-magnetic storage with no moving parts connecting via SATA or PCIe M.2 (NVMe)[cite: 49, 50].</p>
-        <p><strong>HDDs:</strong> Uses magnetic spinning platters, spindle, actuator, and read/write heads[cite: 51].</p>
-        <p><strong>RAID:</strong> Combines multiple drives for data redundancy and performance[cite: 52].</p>
-        <p><strong>Removable Storage:</strong> External enclosures, USB flash drives, and memory card readers[cite: 53, 54, 55].</p>
+      <section class="guide-section" id="storage">
+        <div class="section-heading"><span class="section-kicker">04 / Long-term data</span><h2>Storage devices</h2><p>Storage keeps the operating system, applications, and files even when the computer is turned off.</p></div>
+        <div class="cards-grid"><div class="mini-card"><span class="mini-icon">SSD</span><h3>Solid-state drives</h3><p>Fast, quiet storage with no moving parts. Connects through SATA or PCIe M.2 (NVMe).</p></div><div class="mini-card"><span class="mini-icon">HDD</span><h3>Hard disk drives</h3><p>Uses spinning magnetic platters, a spindle, actuator, and read/write heads.</p></div><div class="mini-card"><span class="mini-icon">RAID</span><h3>Drive arrays</h3><p>Combines multiple drives for improved performance, capacity, or redundancy.</p></div></div>
+        <figure class="image-card wide-image"><img src="assets/graphic-012.png" alt="Installing an M.2 storage drive on a motherboard" loading="lazy" /><figcaption>M.2 drives fit directly onto the motherboard</figcaption></figure>
       </section>
 
-      <!-- Section 6: System Memory -->
-      <section id="system-memory">
-        <h2>System Memory (RAM)</h2>
-<div class="graphics-gallery" aria-label="Section graphics">
-  <figure><img src="assets/graphic-059.png" alt="PC hardware learning graphic 59" loading="lazy"></figure>
-  <figure><img src="assets/graphic-060.png" alt="PC hardware learning graphic 60" loading="lazy"></figure>
-  <figure><img src="assets/graphic-061.png" alt="PC hardware learning graphic 61" loading="lazy"></figure>
-  <figure><img src="assets/graphic-062.png" alt="PC hardware learning graphic 62" loading="lazy"></figure>
-  <figure><img src="assets/graphic-063.png" alt="PC hardware learning graphic 63" loading="lazy"></figure>
-  <figure><img src="assets/graphic-064.png" alt="PC hardware learning graphic 64" loading="lazy"></figure>
-  <figure><img src="assets/graphic-065.png" alt="PC hardware learning graphic 65" loading="lazy"></figure>
-  <figure><img src="assets/graphic-066.png" alt="PC hardware learning graphic 66" loading="lazy"></figure>
-  <figure><img src="assets/graphic-067.png" alt="PC hardware learning graphic 67" loading="lazy"></figure>
-  <figure><img src="assets/graphic-068.png" alt="PC hardware learning graphic 68" loading="lazy"></figure>
-  <figure><img src="assets/graphic-069.png" alt="PC hardware learning graphic 69" loading="lazy"></figure>
-  <figure><img src="assets/graphic-070.png" alt="PC hardware learning graphic 70" loading="lazy"></figure>
-</div>
-
-        <p><strong>Virtual Memory:</strong> Disk storage space used as backup workspace when physical RAM fills up[cite: 60].</p>
-
-        <h3>RAM Types Reference Table</h3>
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th>RAM Type</th>
-              <th>Data Rate</th>
-              <th>Transfer Rate</th>
-              <th>Maximum Size</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>DDR1</td>
-              <td>200 to 400 MT/s</td>
-              <td>1.6 to 3.2 GB/s</td>
-              <td>1 GB</td>
-            </tr>
-            <tr>
-              <td>DDR2</td>
-              <td>400 to 1066 MT/s</td>
-              <td>3.2 to 8.5 GB/s</td>
-              <td>4 GB</td>
-            </tr>
-            <tr>
-              <td>DDR3</td>
-              <td>800 to 2133 MT/s</td>
-              <td>6.4 to 17.0 GB/s</td>
-              <td>16 GB</td>
-            </tr>
-            <tr>
-              <td>DDR4</td>
-              <td>1600 to 3200 MT/s</td>
-              <td>12.8 to 25.6 GB/s</td>
-              <td>32 GB</td>
-            </tr>
-            <tr>
-              <td>DDR5</td>
-              <td>4800 to 8000+ MT/s</td>
-              <td>38.4 to 51.2+ GB/s</td>
-              <td>128 GB+</td>
-            </tr>
-          </tbody>
-        </table>
-        <p><strong>Modules:</strong> Full-sized DIMMs for desktops and SODIMMs for laptops[cite: 65].</p>
-        <p><strong>Multi-Channel Memory:</strong> Dual-channel setups require placing RAM sticks into matching color slots (Channel A vs Channel B)[cite: 67, 68].</p>
+      <section class="guide-section" id="expansion">
+        <div class="section-heading"><span class="section-kicker">05 / Add-on capability</span><h2>Expansion cards</h2><p>Cards add specialized features such as graphics, sound, and wired networking.</p></div>
+        <div class="feature-layout"><figure class="image-card"><img src="assets/graphic-014.png" alt="Motherboard showing PCIe and legacy PCI expansion slots" loading="lazy" /><figcaption>PCIe slots come in x1, x4, x8, and x16 sizes</figcaption></figure><div class="fact-stack"><div class="fact"><strong>Graphics card</strong><span>Provides dedicated processing for displays, games, video, and 3D work.</span></div><div class="fact"><strong>Sound card</strong><span>Adds audio inputs and outputs, including color-coded 3.5 mm jacks.</span></div><div class="fact"><strong>NIC card</strong><span>Provides a network connection, commonly through an RJ-45 Ethernet port.</span></div><div class="fact warning"><strong>PCI vs PCIe</strong><span>Legacy PCI cards are not compatible with modern PCIe slots.</span></div></div></div>
       </section>
 
-      <!-- Section 7: Expansion Cards -->
-      <section id="graphic-cards">
-        <h2>Graphics / Sound / NIC Cards</h2>
-<div class="graphics-gallery" aria-label="Section graphics">
-  <figure><img src="assets/graphic-071.png" alt="PC hardware learning graphic 71" loading="lazy"></figure>
-  <figure><img src="assets/graphic-072.png" alt="PC hardware learning graphic 72" loading="lazy"></figure>
-  <figure><img src="assets/graphic-073.png" alt="PC hardware learning graphic 73" loading="lazy"></figure>
-  <figure><img src="assets/graphic-074.png" alt="PC hardware learning graphic 74" loading="lazy"></figure>
-  <figure><img src="assets/graphic-075.png" alt="PC hardware learning graphic 75" loading="lazy"></figure>
-  <figure><img src="assets/graphic-076.png" alt="PC hardware learning graphic 76" loading="lazy"></figure>
-  <figure><img src="assets/graphic-077.png" alt="PC hardware learning graphic 77" loading="lazy"></figure>
-  <figure><img src="assets/graphic-078.png" alt="PC hardware learning graphic 78" loading="lazy"></figure>
-  <figure><img src="assets/graphic-079.png" alt="PC hardware learning graphic 79" loading="lazy"></figure>
-</div>
-
-        <p><strong>Video Cards:</strong> Dedicated graphics processor (GPU) featuring DisplayPort, HDMI, and DVI ports[cite: 72, 73].</p>
-        <p><strong>Sound Cards:</strong> 3.5mm color-coded audio jacks (Green = Out, Pink = Mic, Blue = In)[cite: 75, 76].</p>
-        <p><strong>NIC Cards:</strong> Network cards with RJ-45 ports for Ethernet connection[cite: 77, 78].</p>
+      <section class="guide-section" id="cables">
+        <div class="section-heading"><span class="section-kicker">06 / Power and data paths</span><h2>Cables & connectors</h2><p>Each connector has a specific shape and purpose. Never force a plug into a socket.</p></div>
+        <div class="cards-grid"><div class="mini-card"><h3>SATA</h3><p>Connects internal drives to the motherboard for data and to the power supply for energy. SATA III supports up to 6 Gb/s.</p></div><div class="mini-card"><h3>Molex</h3><p>An older four-pin power connector supplying 5 V and 12 V to legacy devices and accessories.</p></div><div class="mini-card"><h3>Display cables</h3><p>HDMI and DisplayPort are common digital video connections. DVI and VGA are older display standards.</p></div></div>
       </section>
 
-      <!-- Section 8: Peripheral Devices -->
-      <section id="peripheral-devices">
-        <h2>Peripheral Devices</h2>
-<div class="graphics-gallery" aria-label="Section graphics">
-  <figure><img src="assets/graphic-080.png" alt="PC hardware learning graphic 80" loading="lazy"></figure>
-  <figure><img src="assets/graphic-081.png" alt="PC hardware learning graphic 81" loading="lazy"></figure>
-  <figure><img src="assets/graphic-082.png" alt="PC hardware learning graphic 82" loading="lazy"></figure>
-  <figure><img src="assets/graphic-083.png" alt="PC hardware learning graphic 83" loading="lazy"></figure>
-  <figure><img src="assets/graphic-084.png" alt="PC hardware learning graphic 84" loading="lazy"></figure>
-  <figure><img src="assets/graphic-085.png" alt="PC hardware learning graphic 85" loading="lazy"></figure>
-  <figure><img src="assets/graphic-086.png" alt="PC hardware learning graphic 86" loading="lazy"></figure>
-  <figure><img src="assets/graphic-087.png" alt="PC hardware learning graphic 87" loading="lazy"></figure>
-  <figure><img src="assets/graphic-088.png" alt="PC hardware learning graphic 88" loading="lazy"></figure>
-  <figure><img src="assets/graphic-089.png" alt="PC hardware learning graphic 89" loading="lazy"></figure>
-  <figure><img src="assets/graphic-090.png" alt="PC hardware learning graphic 90" loading="lazy"></figure>
-  <figure><img src="assets/graphic-091.png" alt="PC hardware learning graphic 91" loading="lazy"></figure>
-  <figure><img src="assets/graphic-092.png" alt="PC hardware learning graphic 92" loading="lazy"></figure>
-  <figure><img src="assets/graphic-093.png" alt="PC hardware learning graphic 93" loading="lazy"></figure>
-  <figure><img src="assets/graphic-094.png" alt="PC hardware learning graphic 94" loading="lazy"></figure>
-  <figure><img src="assets/graphic-095.png" alt="PC hardware learning graphic 95" loading="lazy"></figure>
-  <figure><img src="assets/graphic-096.png" alt="PC hardware learning graphic 96" loading="lazy"></figure>
-</div>
-
-        <p><strong>USB Connectors:</strong> Type A, Type B, Micro USB, and reversible USB Type-C[cite: 87, 88].</p>
-        <p><strong>Displays:</strong> Comparing LCD (IPS, TN, VA) with high refresh rate OLED monitors[cite: 90].</p>
-        <p><strong>Thunderbolt:</strong> High-speed 40 Gbps data transfer over USB-C connector[cite: 94].</p>
-        <p><strong>Lightning:</strong> Apple proprietary connector being replaced by USB-C[cite: 95].</p>
+      <section class="guide-section" id="peripherals">
+        <div class="section-heading"><span class="section-kicker">07 / Working with the computer</span><h2>Peripheral devices</h2><p>Peripherals let people interact with the computer and extend what it can do.</p></div>
+        <div class="two-column"><div class="fact-stack"><div class="fact"><strong>USB</strong><span>Type-A, Type-B, Micro USB, and reversible USB-C connectors support different devices and speeds.</span></div><div class="fact"><strong>Displays</strong><span>LCD panels may use IPS, TN, or VA technology; OLED displays offer high contrast and fast response.</span></div><div class="fact"><strong>Thunderbolt</strong><span>Uses a USB-C connector for high-speed data, display, and power connections.</span></div></div><figure class="image-card"><img src="assets/graphic-082.png" alt="Desktop computer front panel with optical drive, power button, and USB ports" loading="lazy" /><figcaption>Front-panel ports connect everyday peripherals</figcaption></figure></div>
       </section>
 
-      <!-- Section 9: Power Supplies and Cooling -->
-      <section id="power-supplies">
-        <h2>Power Supplies And Cooling</h2>
-<div class="graphics-gallery" aria-label="Section graphics">
-  <figure><img src="assets/graphic-097.png" alt="PC hardware learning graphic 97" loading="lazy"></figure>
-  <figure><img src="assets/graphic-098.png" alt="PC hardware learning graphic 98" loading="lazy"></figure>
-  <figure><img src="assets/graphic-099.png" alt="PC hardware learning graphic 99" loading="lazy"></figure>
-  <figure><img src="assets/graphic-100.png" alt="PC hardware learning graphic 100" loading="lazy"></figure>
-  <figure><img src="assets/graphic-101.png" alt="PC hardware learning graphic 101" loading="lazy"></figure>
-  <figure><img src="assets/graphic-102.png" alt="PC hardware learning graphic 102" loading="lazy"></figure>
-  <figure><img src="assets/graphic-103.png" alt="PC hardware learning graphic 103" loading="lazy"></figure>
-  <figure><img src="assets/graphic-104.png" alt="PC hardware learning graphic 104" loading="lazy"></figure>
-  <figure><img src="assets/graphic-105.png" alt="PC hardware learning graphic 105" loading="lazy"></figure>
-  <figure><img src="assets/graphic-106.png" alt="PC hardware learning graphic 106" loading="lazy"></figure>
-  <figure><img src="assets/graphic-107.png" alt="PC hardware learning graphic 107" loading="lazy"></figure>
-  <figure><img src="assets/graphic-108.png" alt="PC hardware learning graphic 108" loading="lazy"></figure>
-</div>
-
-        <p><strong>Power Supply Unit:</strong> Converts AC wall power to internal DC voltages[cite: 98].</p>
-
-        <h3>Wattage Rating Output Table</h3>
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th>Output Rail (VDC)</th>
-              <th>Maximum Load (A)</th>
-              <th>Maximum Output (W)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>+3.3 V</td>
-              <td>20 A</td>
-              <td>130 W</td>
-            </tr>
-            <tr>
-              <td>+5 V</td>
-              <td>20 A</td>
-              <td>130 W</td>
-            </tr>
-            <tr>
-              <td>+12 V</td>
-              <td>33 A</td>
-              <td>396 W</td>
-            </tr>
-            <tr>
-              <td>-12 V</td>
-              <td>0.8 A</td>
-              <td>9.6 W</td>
-            </tr>
-            <tr>
-              <td>+5 V (Standby)</td>
-              <td>2.5 A</td>
-              <td>12.5 W</td>
-            </tr>
-          </tbody>
-        </table>
-        <p><strong>Main Power:</strong> 24-pin (or 20+4 pin) main motherboard connector[cite: 100, 101].</p>
-        <p><strong>Modular PSU:</strong> Detachable cables to reduce cable clutter in the computer case[cite: 102].</p>
-        <p><strong>Air Cooling:</strong> Thermal paste bridges gaps between CPU and heat sink block, cooled by CPU fan[cite: 105].</p>
-        <p><strong>Liquid Cooling:</strong> Uses a pump, water block, tubing, radiator, and fans to cool high-performance components[cite: 107].</p>
+      <section class="guide-section" id="power">
+        <div class="section-heading"><span class="section-kicker">08 / Keep it running</span><h2>Power supplies & cooling</h2><p>The power supply converts wall power, while cooling moves heat away from the CPU and other high-performance parts.</p></div>
+        <div class="feature-layout reverse"><div class="fact-stack"><div class="fact"><strong>Power supply</strong><span>Converts AC wall power into the DC voltages used by internal components.</span></div><div class="fact"><strong>Air cooling</strong><span>Thermal paste fills microscopic gaps between the CPU and heatsink, while fans move air through the case.</span></div><div class="fact"><strong>Liquid cooling</strong><span>A pump, water block, tubing, radiator, and fans move heat away from demanding components.</span></div></div><figure class="image-card"><img src="assets/graphic-105.png" alt="Computer cooling and power supply reference graphic" loading="lazy" /><figcaption>Power and airflow work together to keep components stable</figcaption></figure></div>
       </section>
 
-      <p><a href="#">↑ Back to top</a></p>
+      <footer class="page-footer"><a href="#overview">Back to the beginning ↑</a><p>Built as a visual reference for learning PC hardware fundamentals.</p></footer>
     </main>
-
-    <!-- JavaScript to toggle sidebar -->
     <script>
-      function toggleSidebar() {
-        document.getElementById('sidebar').classList.toggle('open');
-      }
-
-      function closeSidebar() {
-        document.getElementById('sidebar').classList.remove('open');
-      }
+      const sidebar = document.getElementById('sidebar');
+      const menuButton = document.querySelector('.menu-button');
+      function toggleSidebar() { const isOpen = sidebar.classList.toggle('open'); menuButton.setAttribute('aria-expanded', String(isOpen)); }
+      function closeSidebar() { sidebar.classList.remove('open'); menuButton.setAttribute('aria-expanded', 'false'); }
     </script>
   </body>
 </html>
