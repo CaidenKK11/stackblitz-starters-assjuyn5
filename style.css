@@ -1,0 +1,258 @@
+/* Base Page & Typography Settings */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Hamburger Toggle Button */
+.hamburger-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 16px;
+  padding: 10px 16px;
+  cursor: pointer;
+  z-index: 100;
+  background-color: #0056b3;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+}
+
+.hamburger-btn:hover {
+  background-color: #003d80;
+}
+
+/* Collapsible Sidebar Navigation */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px; /* Hidden off-screen by default */
+  width: 240px;
+  height: 100%;
+  background-color: #1a1a2e;
+  padding: 65px 15px 20px 15px;
+  transition: left 0.3s ease;
+  z-index: 99;
+  overflow-y: auto;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Sidebar Open State */
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar h2 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-left: 8px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #33334d;
+  padding-bottom: 10px;
+}
+
+.sidebar a {
+  display: block;
+  color: #cccccc;
+  padding: 10px 12px;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar a:hover {
+  background-color: #0056b3;
+  color: #ffffff;
+}
+
+/* Main Content Area */
+.content {
+  padding: 80px 20px 40px 20px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.content h1 {
+  color: #1a1a2e;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.content > p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+/* Section Cards */
+section {
+  background: #ffffff;
+  padding: 24px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+  color: #0056b3;
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #eef2f5;
+  padding-bottom: 8px;
+}
+
+section h3 {
+  color: #1a1a2e;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+section p {
+  margin-bottom: 12px;
+}
+
+section ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+section ul ul {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+section li {
+  margin-bottom: 6px;
+}
+
+/* Image Styling */
+.section-img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  display: block;
+  margin: 18px auto;
+  border-radius: 6px;
+  border: 1px solid #dddddd;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling for RAM & Wattage Tables */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 18px 0;
+  font-size: 14px;
+  background-color: #ffffff;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #dddddd;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+.data-table th {
+  background-color: #0056b3;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.data-table tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* Back to top Link */
+.content a[href='#'] {
+  display: inline-block;
+  color: #0056b3;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.content a[href='#']:hover {
+  text-decoration: underline;
+}
+
+/* Desktop Responsiveness */
+@media (min-width: 1024px) {
+  .sidebar {
+    left: 0;
+  }
+
+  .hamburger-btn {
+    display: none;
+  }
+
+  .content {
+    margin-left: 270px;
+    padding-top: 40px;
+  }
+}
+
+
+/* Original PC learning graphics: preserve every edge and all embedded labels. */
+.graphics-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+  gap: 1rem;
+  width: 100%;
+  margin: 1.25rem 0 1.75rem;
+}
+.graphics-gallery figure {
+  margin: 0;
+  min-width: 0;
+  background: #fff;
+  border: 1px solid #d8dee8;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.graphics-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.section-img {
+  display: block;
+  max-width: 100%;
+  width: min(100%, 760px);
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  margin: 1rem auto;
+}
+@media (max-width: 600px) {
+  .graphics-gallery { grid-template-columns: 1fr; }
+}
