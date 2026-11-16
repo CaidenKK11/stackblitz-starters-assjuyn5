@@ -6,6 +6,9 @@
     <meta name="description" content="A visual guide to the components inside a personal computer." />
     <title>Inside a PC | Hardware Guide</title>
     <link rel="stylesheet" href="style.css" />
+    <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
   </head>
   <body>
     <button class="menu-button" aria-controls="sidebar" aria-expanded="false" onclick="toggleSidebar()">
@@ -17,6 +20,7 @@
       <nav aria-label="Guide sections">
         <p class="nav-label">Start here</p>
         <a href="#overview" onclick="closeSidebar()">Overview</a>
+        <a href="#computers" onclick="closeSidebar()">Personal computers</a>
         <a href="#safety" onclick="closeSidebar()">Safety & ESD</a>
         <p class="nav-label">Core components</p>
         <a href="#motherboard" onclick="closeSidebar()">Motherboard</a>
@@ -39,6 +43,19 @@
         <div class="hero-actions"><a class="button button-primary" href="#safety">Begin the tour <span>→</span></a><span class="hero-note">9 core topics · visual references</span></div>
       </header>
 
+      <section class="guide-section computer-section" id="computers">
+        <div class="section-heading"><span class="section-kicker">The complete system</span><h2>Personal computers</h2><p>Start with the outside of the machine, then use the sections below to trace each internal part and connection.</p></div>
+        <div class="computer-views">
+          <figure class="image-card computer-view"><img src="assets/front.png" alt="Labeled front view of a desktop computer case" /><figcaption>Front of a desktop computer case</figcaption></figure>
+          <figure class="image-card computer-view"><img src="assets/rear.png" alt="Labeled rear view of a desktop computer case" /><figcaption>Rear of a desktop computer case</figcaption></figure>
+        </div>
+        <div class="reference-gallery computer-gallery" aria-label="Personal computer reference images">
+          <figure><img src="assets/graphic-001.png" alt="Personal computer overview title graphic" loading="lazy" /><figcaption>Overview</figcaption></figure>
+          <figure><img src="assets/graphic-002.png" alt="Personal computer front view reference" loading="lazy" /><figcaption>Front view</figcaption></figure>
+          <figure><img src="assets/graphic-003.png" alt="Personal computer rear view reference" loading="lazy" /><figcaption>Rear view</figcaption></figure>
+        </div>
+      </section>
+
       <section class="intro-grid" aria-label="Guide overview">
         <div class="intro-card"><span class="card-number">01</span><h2>Start with the big picture</h2><p>The case holds the power supply, motherboard, processor, memory, storage, cooling, and optional expansion cards.</p></div>
         <div class="intro-card accent-card"><span class="card-number">02</span><h2>Follow the data path</h2><p>Data moves from storage into memory, through the CPU, and out to displays, networks, and other peripherals.</p></div>
@@ -51,21 +68,25 @@
           <div class="safety-list"><div class="safety-item"><span>01</span><div><strong>Disconnect power</strong><p>Shut down the computer, unplug it from the wall, and press the power button once to discharge remaining power.</p></div></div><div class="safety-item"><span>02</span><div><strong>Control static electricity</strong><p>Use an ESD wrist strap and grounding mat whenever possible. Avoid working on carpet or wearing clothing that creates static.</p></div></div><div class="safety-item"><span>03</span><div><strong>Use a safe workbench</strong><p>Work on a clean, dry, non-conductive surface. Hold circuit boards by their edges and store parts in ESD-safe bags.</p></div></div></div>
           <figure class="image-card safety-image"><img src="assets/graphic-006.png" alt="An anti-static wrist strap on a grounding mat" loading="lazy" /><figcaption>Anti-static wrist strap and grounding mat</figcaption></figure>
         </div>
+        <div class="reference-gallery" data-gallery="safety" aria-label="Safety and ESD reference images"></div>
       </section>
 
       <section class="guide-section" id="motherboard">
         <div class="section-heading"><span class="section-kicker">01 / The foundation</span><h2>Motherboard</h2><p>The main circuit board connects the computer’s components and gives them paths for power and data.</p></div>
         <div class="feature-layout"><figure class="image-card"><img src="assets/graphic-009.png" alt="Motherboard showing CPU, memory, storage, and adapter connectors" loading="lazy" /><figcaption>Key motherboard connectors</figcaption></figure><div class="fact-stack"><div class="fact"><strong>Core job</strong><span>Routes data between the CPU, RAM, cache, storage, and expansion cards.</span></div><div class="fact"><strong>What to find</strong><span>CPU socket, DIMM memory slots, M.2 connector, SATA connectors, PCIe slots, and front-panel headers.</span></div><div class="fact"><strong>Installation note</strong><span>Install the I/O shield and motherboard standoffs before securing the board inside the case.</span></div></div></div>
+        <div class="reference-gallery" data-gallery="motherboard" aria-label="Motherboard reference images"></div>
       </section>
 
       <section class="guide-section" id="cpu">
         <div class="section-heading"><span class="section-kicker">02 / The processor</span><h2>CPU</h2><p>The central processing unit fetches, decodes, and executes instructions.</p></div>
         <div class="two-column"><div><h3>What matters</h3><ul class="clean-list"><li>Clock speed and the number of cores affect how quickly tasks can run.</li><li>The CPU socket must match the motherboard.</li><li>AMD commonly uses PGA-style processors; Intel commonly uses LGA-style sockets.</li></ul></div><figure class="image-card"><img src="assets/graphic-008.png" alt="Diagram showing the relationship between CPU, cache, RAM, and storage" loading="lazy" /><figcaption>How the processor relates to memory and storage</figcaption></figure></div>
+        <div class="reference-gallery" data-gallery="cpu" aria-label="CPU reference images"></div>
       </section>
 
       <section class="guide-section" id="memory">
         <div class="section-heading"><span class="section-kicker">03 / Fast working space</span><h2>System memory (RAM)</h2><p>RAM temporarily holds the instructions and data the CPU is actively using.</p></div>
         <div class="feature-layout"><div class="fact-stack"><div class="fact"><strong>Desktop vs laptop</strong><span>Desktops use full-sized DIMMs; laptops use smaller SO-DIMMs.</span></div><div class="fact"><strong>Dual-channel memory</strong><span>Install matching modules in the recommended paired slots for more memory bandwidth.</span></div><div class="fact"><strong>Virtual memory</strong><span>When RAM fills up, the operating system can use part of the storage drive as slower backup workspace.</span></div></div><div class="memory-callout"><span class="mini-icon">RAM</span><strong>Fast working space</strong><p>RAM is the computer’s short-term workspace: quick to access, but limited and temporary.</p></div></div>
+        <div class="reference-gallery" data-gallery="memory" aria-label="System memory reference images"></div>
         <div class="table-wrap"><table class="data-table"><caption>RAM generations at a glance</caption><thead><tr><th>Type</th><th>Typical data rate</th><th>Transfer rate</th><th>Maximum module size</th></tr></thead><tbody><tr><td>DDR1</td><td>200–400 MT/s</td><td>1.6–3.2 GB/s</td><td>1 GB</td></tr><tr><td>DDR2</td><td>400–1066 MT/s</td><td>3.2–8.5 GB/s</td><td>4 GB</td></tr><tr><td>DDR3</td><td>800–2133 MT/s</td><td>6.4–17.0 GB/s</td><td>16 GB</td></tr><tr><td>DDR4</td><td>1600–3200 MT/s</td><td>12.8–25.6 GB/s</td><td>32 GB</td></tr><tr><td>DDR5</td><td>4800–8000+ MT/s</td><td>38.4–51.2+ GB/s</td><td>128 GB+</td></tr></tbody></table></div>
       </section>
 
@@ -73,30 +94,36 @@
         <div class="section-heading"><span class="section-kicker">04 / Long-term data</span><h2>Storage devices</h2><p>Storage keeps the operating system, applications, and files even when the computer is turned off.</p></div>
         <div class="cards-grid"><div class="mini-card"><span class="mini-icon">SSD</span><h3>Solid-state drives</h3><p>Fast, quiet storage with no moving parts. Connects through SATA or PCIe M.2 (NVMe).</p></div><div class="mini-card"><span class="mini-icon">HDD</span><h3>Hard disk drives</h3><p>Uses spinning magnetic platters, a spindle, actuator, and read/write heads.</p></div><div class="mini-card"><span class="mini-icon">RAID</span><h3>Drive arrays</h3><p>Combines multiple drives for improved performance, capacity, or redundancy.</p></div></div>
         <figure class="image-card wide-image"><img src="assets/graphic-012.png" alt="Installing an M.2 storage drive on a motherboard" loading="lazy" /><figcaption>M.2 drives fit directly onto the motherboard</figcaption></figure>
+        <div class="reference-gallery" data-gallery="storage" aria-label="Storage device reference images"></div>
       </section>
 
       <section class="guide-section" id="expansion">
         <div class="section-heading"><span class="section-kicker">05 / Add-on capability</span><h2>Expansion cards</h2><p>Cards add specialized features such as graphics, sound, and wired networking.</p></div>
         <div class="feature-layout"><figure class="image-card"><img src="assets/graphic-014.png" alt="Motherboard showing PCIe and legacy PCI expansion slots" loading="lazy" /><figcaption>PCIe slots come in x1, x4, x8, and x16 sizes</figcaption></figure><div class="fact-stack"><div class="fact"><strong>Graphics card</strong><span>Provides dedicated processing for displays, games, video, and 3D work.</span></div><div class="fact"><strong>Sound card</strong><span>Adds audio inputs and outputs, including color-coded 3.5 mm jacks.</span></div><div class="fact"><strong>NIC card</strong><span>Provides a network connection, commonly through an RJ-45 Ethernet port.</span></div><div class="fact warning"><strong>PCI vs PCIe</strong><span>Legacy PCI cards are not compatible with modern PCIe slots.</span></div></div></div>
+        <div class="reference-gallery" data-gallery="expansion" aria-label="Expansion card reference images"></div>
       </section>
 
       <section class="guide-section" id="cables">
         <div class="section-heading"><span class="section-kicker">06 / Power and data paths</span><h2>Cables & connectors</h2><p>Each connector has a specific shape and purpose. Never force a plug into a socket.</p></div>
         <div class="cards-grid"><div class="mini-card"><h3>SATA</h3><p>Connects internal drives to the motherboard for data and to the power supply for energy. SATA III supports up to 6 Gb/s.</p></div><div class="mini-card"><h3>Molex</h3><p>An older four-pin power connector supplying 5 V and 12 V to legacy devices and accessories.</p></div><div class="mini-card"><h3>Display cables</h3><p>HDMI and DisplayPort are common digital video connections. DVI and VGA are older display standards.</p></div></div>
+        <div class="reference-gallery" data-gallery="cables" aria-label="Cable and connector reference images"></div>
       </section>
 
       <section class="guide-section" id="peripherals">
         <div class="section-heading"><span class="section-kicker">07 / Working with the computer</span><h2>Peripheral devices</h2><p>Peripherals let people interact with the computer and extend what it can do.</p></div>
         <div class="two-column"><div class="fact-stack"><div class="fact"><strong>USB</strong><span>Type-A, Type-B, Micro USB, and reversible USB-C connectors support different devices and speeds.</span></div><div class="fact"><strong>Displays</strong><span>LCD panels may use IPS, TN, or VA technology; OLED displays offer high contrast and fast response.</span></div><div class="fact"><strong>Thunderbolt</strong><span>Uses a USB-C connector for high-speed data, display, and power connections.</span></div></div><figure class="image-card"><img src="assets/graphic-082.png" alt="Desktop computer front panel with optical drive, power button, and USB ports" loading="lazy" /><figcaption>Front-panel ports connect everyday peripherals</figcaption></figure></div>
+        <div class="reference-gallery" data-gallery="peripherals" aria-label="Peripheral device reference images"></div>
       </section>
 
       <section class="guide-section" id="power">
         <div class="section-heading"><span class="section-kicker">08 / Keep it running</span><h2>Power supplies & cooling</h2><p>The power supply converts wall power, while cooling moves heat away from the CPU and other high-performance parts.</p></div>
         <div class="feature-layout reverse"><div class="fact-stack"><div class="fact"><strong>Power supply</strong><span>Converts AC wall power into the DC voltages used by internal components.</span></div><div class="fact"><strong>Air cooling</strong><span>Thermal paste fills microscopic gaps between the CPU and heatsink, while fans move air through the case.</span></div><div class="fact"><strong>Liquid cooling</strong><span>A pump, water block, tubing, radiator, and fans move heat away from demanding components.</span></div></div><figure class="image-card"><img src="assets/graphic-105.png" alt="Computer cooling and power supply reference graphic" loading="lazy" /><figcaption>Power and airflow work together to keep components stable</figcaption></figure></div>
+        <div class="reference-gallery" data-gallery="power" aria-label="Power supply and cooling reference images"></div>
       </section>
 
       <footer class="page-footer"><a href="#overview">Back to the beginning ↑</a><p>Built as a visual reference for learning PC hardware fundamentals.</p></footer>
     </main>
+    <script src="script.js"></script>
     <script>
       const sidebar = document.getElementById('sidebar');
       const menuButton = document.querySelector('.menu-button');
